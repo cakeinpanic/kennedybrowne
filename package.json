@@ -1,0 +1,25 @@
+{
+  "name": "kennedybrowne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run build:watch",
+    "mutations": "immutable-css src/tachyons.css --strict",
+    "build": "npm run build:css && npm run build:minify",
+    "build:css": "tachyons src/tachyons.css > css/tachyons.css",
+    "build:minify": "tachyons src/tachyons.css --minify > css/tachyons.min.css",
+    "build:watch": "watch \"npm run build\" ./src/"
+  },
+  "devDependencies": {
+    "copy-files": "^0.1.0",
+    "immutable-css-cli": "^1.1.1",
+    "normalize.css": "^8.0.0",
+    "tachyons-modules": "^1.1.10",
+    "tachyons-cli": "^1.3.2",
+    "watch": "^1.0.2",
+    "jquery": "^3.3.1"
+  }
+}
