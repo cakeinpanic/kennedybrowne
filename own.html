@@ -2,14 +2,13 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./lib/animatedModal.min.js"></script>
 
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -23,16 +22,22 @@
         <a class="link dim gray f6 f5-ns dib mr3 mr4-l" target="_blank"
            href="https://www.kennedybrowne.com/#/milton-friedman-and-the-wonder-of-the-free-market-pencil/"
            title="Home">Original work: Kennedy Browne</a>
-        <a class="link dim gray f6 f5-ns dib mr3 mr4-l" href="./own.html" title="About">Translate your own</a>
+        <a class="link dim gray f6 f5-ns dib mr3 mr4-l b" href="#" title="About">Translate your own</a>
         <a class="link dim gray f6 f5-ns dib mr4-l" href="./about.html" title="About">About</a>
     </div>
 </nav>
 
 <article id="translations" class="content calisto scrollbar">
+    <a class="template link overflow-hidden">
+        <div class="text-container aspect-ratio--4x6 lh-copy">
+            <div class="language f4 ">english(original)</div>
+            <div class="text fw8" contenteditable="true" id="sourceText">Input your own text to look at metamorphosis</div>
+        </div>
+    </a>
     <a class="template template-hidden link overflow-hidden" href="#animatedModal">
         <div class="text-container aspect-ratio--4x6 lh-copy">
             <div class="language f4 "></div>
-            <div class="text f8"></div>
+            <div class="text fw8" contenteditable="true"></div>
         </div>
     </a>
 </article>
@@ -55,6 +60,5 @@
 </body>
 
 <script src="./renderAll.js"></script>
-<script src="original.js"></script>
-
+<script src="./translate.js"></script>
 
