@@ -17,8 +17,6 @@ function clearGenerated() {
 }
 
 function displayTexts(texts, newTranslationOrder) {
-    clearGenerated();
-
     const order = newTranslationOrder || TRANSLATIONS_ORDER;
 
     const template = document.querySelector('#translations .template-hidden');

@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./lib/animatedModal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 
     <link rel="stylesheet" href="./style.css">
 
@@ -22,23 +23,30 @@
         <a class="link dim gray f6 f5-ns dib mr3 mr4-l" target="_blank"
            href="https://www.kennedybrowne.com/#/milton-friedman-and-the-wonder-of-the-free-market-pencil/"
            title="Home">Original work: Kennedy Browne</a>
-        <a class="link dim gray f6 f5-ns dib mr3 mr4-l b" href="#" title="About">Translate your own</a>
-        <a class="link dim gray f6 f5-ns dib mr4-l" href="./about.html" title="About">About</a>
+        <a class="link dim gray f6 f5-ns dib mr3 mr4-l b bb bw2 " href="#" title="About">Translate your own</a>
+        <a class="link dim gray f6 f5-ns dib mr4-l" href="./about.html" title="About">About this project</a>
     </div>
 </nav>
 
 <article id="translations" class="content calisto scrollbar">
+
     <a class="template link overflow-hidden">
         <div class="text-container aspect-ratio--4x6 lh-copy">
-            <div class="language f4 ">english(original)</div>
-            <div class="text fw8" contenteditable="true" id="sourceText">Input your own text to look at metamorphosis</div>
+
+            <div class="language f4 ">english(original)<span class="disclaimer">currently limited by 50 characters</span></div>
+            <div class="text fw8" contenteditable="true" id="sourceText">Input any text to see metamorphosis</div>
         </div>
     </a>
+
     <a class="template template-hidden link overflow-hidden" href="#animatedModal">
         <div class="text-container aspect-ratio--4x6 lh-copy">
             <div class="language f4 "></div>
             <div class="text fw8" contenteditable="true"></div>
         </div>
+    </a>
+
+    <a class="template " id="loader">
+        <div class="loader">Loading...</div>
     </a>
 </article>
 
