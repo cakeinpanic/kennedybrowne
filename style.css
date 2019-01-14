@@ -3,7 +3,7 @@
 }
 
 .text-container {
-    padding: 30px;
+    padding: 15px 30px;
     height: 100%;
     cursor: pointer;
     position: relative;
@@ -24,6 +24,15 @@
     color: white;
 }
 
+
+.input {
+    width: calc(100% - 10px);
+    height: 50%;
+    margin: 10px 5px ;
+    outline: 1px solid black;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
 .title {
     margin-bottom: 16px;
     font-weight: 700;
@@ -34,7 +43,7 @@
     width: 480px;
     flex-shrink: 0;
     position: relative;
-    padding: 10px 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -58,6 +67,7 @@
 #loader:after {
     display: none;
 }
+
 .template .text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,6 +83,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 .template-hidden {
@@ -181,5 +193,27 @@
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+
+@media all and (min-width:0px) and (max-width: 450px) {
+    .header {
+        padding: 10px 5px;
+    }
+    .content {
+        margin-top: 90px;
+        height: calc(100% - 90px);
+    }
+
+    .content-about {
+        flex-direction: column-reverse;
+    }
+
+    .template {
+        width: 95vw;
+    }
+    .text-container {
+        font-size: .6em;
     }
 }

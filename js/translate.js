@@ -1,5 +1,4 @@
 // Enter an API key from the Google API Console:
-//   https://console.developers.google.com/apis/credentials
 const apiKey = 'AIzaSyC9ZrS7U2d9aX4dSf2PL1pPCmxZNtcLnlk';
 
 const OWN_ORDER = [...TRANSLATIONS_ORDER];
@@ -43,13 +42,13 @@ function translate(data) {
     });
 }
 
-// function translate(t) {
-//     return new Promise((resolve)=>{
-//         setTimeout(()=>{
-//             resolve({data: {translations: [{translatedText: 666 + t.textToTranslate}]}})
-//         }, 100)
-//     });
-// }
+function translate(t) {
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve({data: {translations: [{translatedText: 666 + t.textToTranslate}]}})
+        }, 100)
+    });
+}
 
 function getLanguageForApi(i) {
     const l = TRANSLATIONS_ORDER[i];
@@ -58,7 +57,6 @@ function getLanguageForApi(i) {
     }
     return l;
 }
-
 
 function handleAnyText(startText) {
     const texts = [startText];
@@ -91,11 +89,11 @@ function handleAnyText(startText) {
 function handleText() {
     loader.show();
     clearGenerated();
-    const text = sourceText.html();
+    const text = sourceText.val();
     text.length = text.length < 51 ? text.length : 50;
     handleAnyText(text).then(a => {
         const withLanguageMarks = a.reduce((k, b, i) => {
-            return {...k, ...{[TRANSLATIONS_ORDER[i]]: b}}
+            return Object.assign({}, k, {[TRANSLATIONS_ORDER[i]]: b});
         }, {});
         console.log(JSON.stringify(withLanguageMarks));
         loader.hide();

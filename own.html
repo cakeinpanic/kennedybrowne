@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -15,16 +16,17 @@
 <body>
 <nav class="header">
     <div class="db v-mid w-100 tc">
-        <div class="dim f3 title">
+        <div class="dim f5 f4-ns title">
             <a class="link" href="./index.html"
                title="Home">
                 Milton Friedman and the Wonder of the Free Market Pencil
             </a></div>
-        <a class="link dim gray f6 f5-ns dib mr3 mr4-l" target="_blank"
+        <a class="link subtitle dim gray f7 f6-ns dib mr3 mr4-l" target="_blank"
            href="https://www.kennedybrowne.com/#/milton-friedman-and-the-wonder-of-the-free-market-pencil/"
-           title="Home">Original work: Kennedy Browne</a>
-        <a class="link dim gray f6 f5-ns dib mr3 mr4-l b bb bw2 " href="#" title="About">Translate your own</a>
-        <a class="link dim gray f6 f5-ns dib mr4-l" href="./about.html" title="About">About this project</a>
+           title="Home">Original work</a>
+
+        <a class="link subtitle dim gray f7 f6-ns dib mr3 mr4-l" href="./own.html" title="Translate your own">Translate your own</a>
+        <a class="link subtitle  dim gray f7 f6-ns dib mr4-l" href="./about.html" title="About">About</a>
     </div>
 </nav>
 
@@ -32,16 +34,16 @@
 
     <a class="template link overflow-hidden">
         <div class="text-container aspect-ratio--4x6 lh-copy">
-
-            <div class="language f4 ">english(original)<span class="disclaimer">currently limited by 50 characters</span></div>
-            <div class="text fw8" contenteditable="true" id="sourceText">Input any text to see metamorphosis</div>
+            <div class="language f4 ">Watch it</div>
+            <div class="text fw8" >Input any text in english and watch its metamorphosis through translation. Currently length of the text is limited by 50 characters</div>
+            <textarea class="text fw8 input"  id="sourceText">Here is some sample text, it is nice and short</textarea>
         </div>
     </a>
 
     <a class="template template-hidden link overflow-hidden" href="#animatedModal">
         <div class="text-container aspect-ratio--4x6 lh-copy">
             <div class="language f4 "></div>
-            <div class="text fw8" contenteditable="true"></div>
+            <div class="text fw8"></div>
         </div>
     </a>
 
@@ -50,23 +52,23 @@
     </a>
 </article>
 
-<div id="animatedModal">
-    <div class="modal-content">
-        <div class="close-animatedModal close">
-        </div>
+<!--<div id="animatedModal">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-animatedModal close">-->
+        <!--</div>-->
 
-        <article class="pa3 pa5-ns">
-            <h1 class="popup-language f3 f2-m f1-l">Title</h1>
-            <p class="popup-text measure lh-copy">
+        <!--<article class="pa3 pa5-ns">-->
+            <!--<h1 class="popup-language f3 f2-m f1-l">Title</h1>-->
+            <!--<p class="popup-text measure lh-copy">-->
 
-            </p>
-        </article>
+            <!--</p>-->
+        <!--</article>-->
 
-    </div>
-</div>
+    <!--</div>-->
+<!--</div>-->
 
 </body>
 
-<script src="./renderAll.js"></script>
-<script src="./translate.js"></script>
+<script src="js/renderAll.js"></script>
+<script src="js/translate.js"></script>
 
