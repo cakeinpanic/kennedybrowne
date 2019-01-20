@@ -6,15 +6,16 @@ OWN_ORDER.shift();
 
 const sourceText = $('#sourceText');
 const loader = $('#loader');
+
 const SAMPLE = {
-    'en1': 'Input any text to see metamorphosis',
-    'es': 'Ingrese cualquier texto para ver la metamorfosis.',
-    'de': 'Geben Sie einen beliebigen Text ein, um die Metamorphose anzuzeigen.',
-    'fr': 'Entrez n&#39;importe quel texte pour afficher la métamorphose.',
-    'ja': 'nを入力',
-    'ru': 'Введите n',
-    'en2': 'Enter n'
-};
+    en1: 'Here is some sample text, it is nice and short ',
+    es: 'Aquí hay un texto de ejemplo, es bonito y corto.',
+    de: 'Hier ist ein Beispieltext, der kurz und schön ist.',
+    fr: 'Voici un exemple de texte court et sympathique.',
+    ja: 'これは短くて素敵なテキストの例です。',
+    ru: 'Это пример короткого и красивого текста.',
+    en2: 'This is an example of a short and beautiful text.'
+}
 
 function translate(data) {
     if (!data.textToTranslate) {
@@ -42,13 +43,13 @@ function translate(data) {
     });
 }
 
-function translate(t) {
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve({data: {translations: [{translatedText: 666 + t.textToTranslate}]}})
-        }, 100)
-    });
-}
+// function translate(t) {
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve({data: {translations: [{translatedText: 666 + t.textToTranslate}]}})
+//         }, 100)
+//     });
+// }
 
 function getLanguageForApi(i) {
     const l = TRANSLATIONS_ORDER[i];
