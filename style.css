@@ -24,15 +24,15 @@
     color: white;
 }
 
-
 .input {
     width: calc(100% - 10px);
     height: 50%;
-    margin: 10px 5px ;
+    margin: 10px 5px;
     outline: 1px solid black;
     -webkit-appearance: none;
     border-radius: 0;
 }
+
 .title {
     margin-bottom: 16px;
     font-weight: 700;
@@ -56,13 +56,13 @@
     height: 100%;
 }
 
-.template.en2:after{
-    display: none;
-}
-.template.en1:last-child:after{
+.template.en2:after {
     display: none;
 }
 
+.template.en1:last-child:after {
+    display: none;
+}
 
 #loader:after {
     display: none;
@@ -88,7 +88,7 @@
 }
 
 .template-hidden {
-    display: none;
+    display: none !important;
 }
 
 .language {
@@ -165,9 +165,9 @@
     font-size: 10px;
     position: relative;
     text-indent: -9999em;
-    border-top: 1.1em solid rgba(0,0,0, 0.2);
-    border-right: 1.1em solid rgba(0,0,0, 0.2);
-    border-bottom: 1.1em solid rgba(0,0,0, 0.2);
+    border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
     border-left: 1.1em solid #000000;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -175,6 +175,7 @@
     -webkit-animation: load8 1.1s infinite linear;
     animation: load8 1.1s infinite linear;
 }
+
 @-webkit-keyframes load8 {
     0% {
         -webkit-transform: rotate(0deg);
@@ -185,6 +186,7 @@
         transform: rotate(360deg);
     }
 }
+
 @keyframes load8 {
     0% {
         -webkit-transform: rotate(0deg);
@@ -196,14 +198,15 @@
     }
 }
 
-
-@media all and (min-width:0px) and (max-width: 450px) {
+@media all and (min-width: 0px) and (max-width: 500px) {
     .header {
         padding: 10px 5px;
     }
+
     .content {
         margin-top: 90px;
         height: calc(100% - 90px);
+        display: block;
     }
 
     .content-about {
@@ -212,8 +215,22 @@
 
     .template {
         width: 95vw;
+        height: auto;
+        display: block;
+        margin: 0;
+        padding: 0 0 25px 0;
     }
+
+    .template:after {
+        right: 50%;
+        top: auto;
+        height: auto;
+        bottom: 8px;
+        transform: rotate(90deg);
+    }
+
     .text-container {
         font-size: .6em;
+        height: auto;
     }
 }
