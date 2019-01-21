@@ -71,7 +71,8 @@ function handleAnyText(startText) {
 
     function translateOne(data) {
         return translate(data).then((a) => {
-            texts.push(a.data.translations[0].translatedText);
+            const translatedText = a.data.translations[0].translatedText.replace('&#39', '`');
+            texts.push(translatedText);
 
             if (++i < TRANSLATIONS_ORDER.length) {
                 const data1 = {
